@@ -1,5 +1,4 @@
-
-<?php include $_SERVER['DOCUMENT_ROOT'].'includes/header.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';?>
 
 <div class="col-md-6 col-md-offset-3">
 	<form>
@@ -25,4 +24,4 @@
 	</form>
 </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'includes/footer.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';?>
