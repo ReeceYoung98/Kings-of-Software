@@ -1,4 +1,4 @@
-
+<?php echo $_SERVER['DOCUMENT_ROOT']; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'includes/header.php';?>
 
 <div class="col-md-6 col-md-offset-3">
