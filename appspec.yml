@@ -3,8 +3,6 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
-  - source: /includes/
-    destination: /var/www/html/includes/
 hooks:
   BeforeInstall:
     - location: scripts/start_server
