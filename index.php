@@ -3,7 +3,7 @@
 <div class="col-md-6 col-md-offset-3">
 	<form>
 		<h2 class="form-signin-heading">Please sign in</h2>
-
+		<body bgcolor="#FA6607">
 		<div class="form-group">
 			<label for="inputEmail" class="sr-only">Email address</label>
 			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
