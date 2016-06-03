@@ -1,5 +1,8 @@
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php'; ?>
 <?php
-session_start();
-session_destroy();
-header('Location: index.php');
+$user = new User();
+$user->logout();
+
+Redirect::to('/');
 ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';?>

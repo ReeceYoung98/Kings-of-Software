@@ -1,32 +1,27 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';?>
-<div class="col-md-6 col-md-offset-3">
-	<?php 
-	if (logged_in() === true){
-		echo 'Logged in. <a href=\'logout.php\'>Log out</a>';
-	}else{
-	?>
-	<form action="login.php" method="POST">
-		<h2 class="form-signin-heading">Please sign in</h2>
-		
-		<div class="form-group">
-			<label for="inputUsername" class="sr-only">Email address</label>
-			<input type="username" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
-		</div>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/includes/header.php'; ?>
+<?php
 
-		<div class="form-group">
-			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
-		</div>
+if(Session::exists('home')){
+	echo '<p>' . Session::flash('home') . '</p>';
+}
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="remember-me"> Remember me
-			</label>
-		</div>
+$user = new User();
+if ($user->isLoggedIn()) {
+?>
+<p>Hello <a href='/profile.php?user=<?php echo escape($user->data()->Id) ?>'><?php echo escape($user->data()->Forename) . ' ' . escape($user->data()->Surname); ?></a>.</p>
+<ul>
+	<li><a href='/update.php'>Update details</a></li>
+	<li><a href='/changePassword.php'>Change password</a></li>
+	<li><a href='/logout.php'>Logout</a></li>
+</ul>
+<?php
+	if($user->hasPermission('admin')){
+		echo '<p>You are an admin.</p>';
+	}
 
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-	</form>
-	<?php } ?>
-</div>
+}else{
+	echo 'You need to <a href="/login.php">login</a> or <a href="/register.php">register</a>.';
+}
 
+?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';?>
