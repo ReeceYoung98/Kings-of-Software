@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+date_default_timezone_set('Europe/London');
+
 $GLOBALS['config'] = array(
 	'mysql' => array(
 		'host' => '127.0.0.1',

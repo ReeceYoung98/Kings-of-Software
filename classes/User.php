@@ -19,7 +19,7 @@ class User{
 				if ($this->find($user)) {
 					$this->_isLoggedIn = true;
 				}else{
-					//logout
+					$this->logout();
 				}
 			}
 		}else{
@@ -43,9 +43,10 @@ class User{
 		}
 	}
 
-	public function find($id){
-		if ($id) {
-			$data = $this->_db->get('users', array('Id', '=', $id));
+	public function find($user){
+		if ($user) {
+			$field = (is_numeric($user)) ? 'Id' : 'Id';
+			$data = $this->_db->get('users', array($field, '=', $user));
 
 			if ($data->count()) {
 				$this->_data = $data->first();
@@ -91,8 +92,8 @@ class User{
 
 	public function hasPermission($key){
 		$group = $this->_db->get('Groups', array('Id', '=', $this->data()->Group));
-
-		if ($group->count()) {
+		var_dump($group->count());
+		if ($group->count() === 1) {
 			$permissions = json_decode($group->first()->Permissions, true);
 
 			if ($permissions[$key]) {
