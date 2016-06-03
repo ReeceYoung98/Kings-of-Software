@@ -92,9 +92,7 @@ class User{
 
 	public function hasPermission($key){
 		$group = $this->_db->get('groups', array('Id', '=', $this->data()->Group));
-		echo $group;
-		echo $group->count();
-		if ($group->count() === 1) {
+		if ($group->count()) {
 			$permissions = json_decode($group->first()->Permissions, true);
 
 			if ($permissions[$key]) {
