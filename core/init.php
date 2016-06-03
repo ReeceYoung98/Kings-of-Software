@@ -6,10 +6,10 @@ date_default_timezone_set('Europe/London');
 $GLOBALS['config'] = array(
 	'mysql' => array(
 		'host' => '127.0.0.1',
-		'port' => '8889',
-		'username' => 'aws',
-		'password' => 'ApAjfbBtx9DcCpeN',
-		'db' => 'kingsofsoftware'
+		'port' => '3306',
+		'username' => 'KingsofSoftware',
+		'password' => 'G29MMsv9yUqa7rFN',
+		'db' => 'KingsofSoftware'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
