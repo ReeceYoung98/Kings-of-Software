@@ -22,7 +22,7 @@ if(Input::exists()){
 			),
 			'newPasswordConfirm' => array(
 				'required' => true,
-				'matches' => 'password'
+				'matches' => 'newPassword'
 			)
 		));
 
