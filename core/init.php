@@ -1,15 +1,17 @@
 <?php 
-session_start();
+if(!isset($_SESSION)){
+	session_start();
+}
 
 date_default_timezone_set('Europe/London');
 
 $GLOBALS['config'] = array(
 	'mysql' => array(
 		'host' => '127.0.0.1',
-		'port' => '3306',
-		'username' => 'KingsofSoftware',
-		'password' => 'G29MMsv9yUqa7rFN',
-		'db' => 'KingsofSoftware'
+		'port' => '8889',
+		'username' => 'aws',
+		'password' => 'ApAjfbBtx9DcCpeN',
+		'db' => 'kingsofsoftware'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
