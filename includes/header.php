@@ -21,4 +21,29 @@
 
 	<body bgcolor="#FA6607">
 		<div class="container">
+			<header>
+				<nav class="navbar navbar-default navbar-static-top">
+					<div class="container">
+						<a href="/"><img src="/logo.png" width="" height="" alt="Kings of Software" /></a>
+						<?php
+						$user = new User();
+						if (!$user->isLoggedIn()) {
+							?>
+							<p class="navbar-text navbar-right">
+								<br />
+								You need to <a href="/login.php">login</a> or <a href="/register.php">register</a>.
+							</p>
+							<?php
+						}else{
+							?>
+							<p class="navbar-text navbar-right">
+								<br />
+								<a href='/logout.php'>Logout</a>
+							</p>
+							<?php
+						}
+						?>
+					</div>
+				</nav>
+			</header>
 			<div class="row">

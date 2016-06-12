@@ -70,6 +70,9 @@ if(!$user = Input::get('user')){
 		}
 		?>
 	</table>
+	<div class="alert alert-info">
+		<strong>Be aware!</strong> Purchase history can take a while to propagate. Please allow time for purchases to be linked to your profile.
+	</div>
 <?php 
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';?>

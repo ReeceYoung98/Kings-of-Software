@@ -8,9 +8,9 @@ date_default_timezone_set('Europe/London');
 $GLOBALS['config'] = array(
 	'mysql' => array(
 		'host' => '127.0.0.1',
-		'port' => '3306',
-		'username' => 'KingsofSoftware',
-		'password' => 'G29MMsv9yUqa7rFN',
+		'port' => '3306', //8889
+		'username' => 'KingsofSoftware', //aws
+		'password' => 'G29MMsv9yUqa7rFN', //ApAjfbBtx9DcCpeN
 		'db' => 'KingsofSoftware'
 	),
 	'remember' => array(
