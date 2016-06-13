@@ -22,7 +22,7 @@
 	<body bgcolor="#FA6607">
 		<div class="container">
 			<header>
-				<nav class="navbar navbar-default navbar-static-top">
+				<nav class="navbar">
 					<div class="container">
 						<a href="/"><img src="/logo.png" width="" height="" alt="Kings of Software" /></a>
 						<?php
