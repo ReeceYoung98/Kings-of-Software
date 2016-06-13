@@ -26,6 +26,7 @@ if ($user->isLoggedIn()) {
 	<h2>
 	<br /><br /><br />
 		You need to <a href="/login.php">login</a> or <a href="/register.php">register</a> to view purchase history.
+	<br /><br /><br />
 	</h2>
 	<?php
 }
