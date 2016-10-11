@@ -1,4 +1,5 @@
 # Kings-of-Software
+Project for 'Team Working in Computing' at Fife College.
 
 # Team Members
 
